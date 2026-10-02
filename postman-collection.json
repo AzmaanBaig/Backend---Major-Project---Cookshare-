@@ -1,0 +1,103 @@
+{
+  "info": {
+    "name": "CookShare API",
+    "_postman_id": "cookshare-final-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Azmaan\",\n  \"email\": \"azmaan@example.com\",\n  \"password\": \"password123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/register"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"azmaan@example.com\",\n  \"password\": \"password123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login"
+        }
+      }
+    },
+    {
+      "name": "Get Recipes",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/recipes"
+        }
+      }
+    },
+    {
+      "name": "Search Recipes",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/recipes/search?keyword=vegan"
+        }
+      }
+    },
+    {
+      "name": "Create Recipe With Image",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer YOUR_TOKEN" }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "title", "value": "Chicken Pasta", "type": "text" },
+            { "key": "description", "value": "Simple pasta recipe", "type": "text" },
+            { "key": "ingredients", "value": "pasta,chicken,salt", "type": "text" },
+            { "key": "steps", "value": "boil pasta,cook chicken,mix together", "type": "text" },
+            { "key": "category", "value": "dinner", "type": "text" },
+            { "key": "image", "type": "file", "src": "" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/recipes"
+        }
+      }
+    },
+    {
+      "name": "Get All Ratings",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/ratings"
+        }
+      }
+    },
+    {
+      "name": "Get Meal Plans",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer YOUR_TOKEN" }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/meal-plans"
+        }
+      }
+    }
+  ]
+}

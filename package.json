@@ -1,0 +1,16 @@
+{
+  "name": "cookshare-backend",
+  "version": "1.0.0",
+  "description": "Simple CookShare backend for the Backend Development case study",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "firebase-admin": "^13.6.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0",
+    "multer": "^2.0.2"
+  }
+}
