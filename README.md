@@ -182,7 +182,7 @@ Use these fields:
 
 The image is uploaded to the local Firebase Storage Emulator and the returned `imageUrl` is stored in MongoDB.
 
-## Files to understand for viva
+## Files 
 
 - `server.js` -> starts Express and connects routes
 - `config/db.js` -> MongoDB connection
